@@ -59,3 +59,17 @@ input{
 input:focus{
     outline: 0;
 }
+
+#botaocalcular{
+    background-color: rgb(76, 131, 212);
+    color: white;
+    width: 24rem;
+    height: 0.2rem;
+    border-radius: 0.4rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.8rem;
+    
+}

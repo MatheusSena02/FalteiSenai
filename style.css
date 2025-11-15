@@ -1,0 +1,61 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.sessaologo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logorelogio{
+    width: 10.8rem;
+}
+
+#logonome{
+    width: 14rem;
+}
+
+.sessaoselecao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0.8rem;
+}
+
+.sessaoselecao_template{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.8rem;
+}
+
+.sessaoselecao_botao{
+    margin-left: 0.8rem;
+    width: 4rem;
+    height: 2.6rem;
+    border-radius: 0.6rem;
+}
+
+hr{
+    width: 46.8rem;
+    border-color: black;
+}
+
+input{
+    margin-left: 0.8rem;
+    width: 26rem;
+    border: none;
+    font-size: 1.4rem;
+}
+
+input:focus{
+    outline: 0;
+}

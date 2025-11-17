@@ -1,17 +1,21 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body{
-    box-sizing: border-box;
-    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
 }
 
 main{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+    max-width: 480px;
+    padding: 1rem;
  }
 
 .sessaologo{
@@ -19,49 +23,60 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1.4rem;
 }
 
 #logorelogio{
-    width: 10.8rem;
+    width: 7.5rem;
 }
 
 #logonome{
-    width: 14rem;
+    width: 10rem;
 }
 
 .sessaoselecao{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.8rem;
+    width: 100%;
 }
 
 .sessaoselecao_template{
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    font-size: 1.8rem;
+    width: 100%;
+    font-size: 1.2rem;
 }
 
 
 .sessaoselecao_template_botao{
-    margin-left: 0.8rem;
-    width: 4rem;
-    height: 2.6rem;
+    margin-top: 0.6rem;
+    width: 100%;
+    max-width: 5rem;
+    height: 2.4rem;
     border-radius: 0.6rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    background-color:  #808080
+
+}
+
+.sessaoselecao_template_botoes{
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.6rem;
+    justify-content: center;
 }
 
 hr{
-    width: 46.8rem;
+    width: 100%;
+    max-width: 480px;
     border-color: black;
+    margin: 1rem 0;
 }
 
 input{
-    margin-left: 0.8rem;
-    width: 24.8rem;
+    margin-top: 0.6rem;
+    width: 100%;
     border: none;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 input:focus{
@@ -71,14 +86,112 @@ input:focus{
 #botaocalcular{
     background-color: rgb(76, 131, 212);
     color: white;
-    width: 20rem;
-    height: 0.2rem;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
     outline: 2px solid black;
     border-radius: 0.4rem;
-    font-size: 2rem;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    margin: 1.6rem auto 0 auto;
+    border: none;
+}
+
+.card-alerta{
+    width: 100%;
+    background-color: #e5e5e5;
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.card-vermelho{
+    width: 100%;
+    height: 175px;
+    background: #ff0000;
+    border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.6rem;
-    margin-top: 2.8rem;
 }
+
+.card-vermelho span{
+    color: white;
+    font-size: 70px;
+    font-weight: 500px;
+}
+
+.mensagem{
+    margin-top: 20px;
+    font-size: 19px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.hidden{
+    display: none;
+}
+
+@media (min-width: 768px){
+    #logorelogio{
+        width: 10.8rem;
+    }
+
+    #logonome{
+        width: 14rem;
+    }
+
+    .sessaoselecao_template{
+        flex-direction: row;
+        align-items: center;
+        font-size: 1.8rem;
+    }
+
+
+    .sessaoselecao_template_botao{
+        margin-left: 0.8rem;
+        margin-top: 0;
+        width: 4rem;
+        height: 2.6rem;
+        font-size: 1.2rem;    
+    }
+
+    .sessaoselecao_template_botoes{
+        gap: 0.2rem;
+        justify-content: center;
+    }
+
+    input{
+        max-width: 24.8rem;
+        font-size: 1.4rem;
+        border: none;
+    }
+
+    hr{
+        max-width: 46.8rem;
+    }
+
+    #botaocelular{
+        font-size: 2rem;
+        max-width: 20rem;
+    }
+
+    .resultado_box p {
+        font-size: 1.4rem;
+    }
+
+    .card-vermelho{
+        height: 200px;
+    }
+
+    .card-vermelho span {
+        font-size: 80px;
+    }
+}
+
+
+

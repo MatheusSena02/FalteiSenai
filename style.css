@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
@@ -13,49 +15,52 @@ body{
 main{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
-    max-width: 480px;
-    padding: 1rem;
+    max-width: 900px;
  }
 
-.sessaologo{
+.sessao-logos{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1.4rem;
 }
 
-#logorelogio{
-    width: 7.5rem;
+#logo-relogio{
+    width: 8rem;
 }
 
-#logonome{
-    width: 10rem;
+#logo-letreiro{
+    width: 12rem;
 }
 
-.sessaoselecao{
+.sessao-selecao{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
 
-.sessaoselecao_template{
-    width: 100%;
-    font-size: 1.2rem;
+.sessao-selecao_template{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
 }
 
 
 .sessaoselecao_template_botao{
-    margin-top: 0.6rem;
-    width: 100%;
+    width: 3.6rem;
     max-width: 5rem;
-    height: 2.4rem;
+    height: 2.6rem;
     border-radius: 0.6rem;
     font-size: 1rem;
-    background-color:  #808080
-
+    background-color: #A4A4A4;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
 }
 
 .sessaoselecao_template_botoes{
@@ -65,18 +70,40 @@ main{
     justify-content: center;
 }
 
-hr{
+.sessao-entrada{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    max-width: 480px;
-    border-color: black;
-    margin: 1rem 0;
+    margin-right: 8rem;
+}
+
+.sessao-entrada_template{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    font-size: 1.4rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+}
+
+.sessao-entrada_template_pergunta{
+    width: 68%;
+}
+
+hr{
+    width: 88%;
+    margin: 0.8rem 0 0; 
+    align-items: center;
 }
 
 input{
-    margin-top: 0.6rem;
-    width: 100%;
+    width: 40%;
     border: none;
     font-size: 1.2rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
 }
 
 input:focus{
@@ -96,8 +123,30 @@ input:focus{
     justify-content: center;
     text-align: center;
     padding: 1rem;
-    margin: 1.6rem auto 0 auto;
+    margin: 0.8rem auto 0 auto;
     border: none;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+}
+
+.mensagem-erroum, .mensagem-errodois{
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-size: 1rem;
+    opacity: 0;
+    visibility: hidden; 
+    padding: 0.6em 0;
+}
+
+.mensagem-erro-transicao{
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-size: 1rem;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+    color: #8f0000;
+    padding: 0.6em 0;
 }
 
 .card-alerta{
@@ -136,7 +185,73 @@ input:focus{
     display: none;
 }
 
-@media (min-width: 768px){
+.resposta{
+    align-items: center;
+    background-color: #d4d0d0;
+    margin: 4rem;
+    width: 100%;
+    height: 16rem;
+}
+
+h2{
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-size: 2.2rem;
+    width: 100%;
+    margin: 1.2rem 2.6rem;
+}
+
+.resposta_resultado{
+    display: flex;
+    align-items: center;
+    margin: 0 2.4rem;
+    gap: 2rem;
+}
+
+.resposta_retrato{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 140px;
+    height: 9.25rem;
+    background: #06BD00;
+}
+
+.resposta_retrato-medio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 140px;
+    height: 9.25rem;
+    background: #CDC000;
+}
+
+.resposta_retrato-critico{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 140px;
+    height: 9.25rem;
+    background: #BD0000;
+}
+
+#resultado{
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-size: 6.8rem;
+    color: white;
+}
+
+#mensagem-resultado{
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+/* @media (min-width: 768px){
     #logorelogio{
         width: 10.8rem;
     }
@@ -194,4 +309,4 @@ input:focus{
 }
 
 
-
+ */

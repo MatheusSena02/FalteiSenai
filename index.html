@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faltei SENAI</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+        <section class="sessao-logos">
+        <img id="logo-relogio"  src="./images/relogio.png" alt="LogoPrincipal_Relogio">
+        <img id="logo-letreiro" src="./images/Adesivo.png" alt="LogoPrincipal_Nome">
+        </section>
+        <section class="sessao-selecao">
+            <div class="sessao-selecao_template">
+                <p>Selecione a carga horária da matéria : </p>
+                <div class="sessaoselecao_template_botoes">
+                    <button class="sessaoselecao_template_botao" id="botao30h">30h</button>
+                    <button class="sessaoselecao_template_botao" id="botao60h">60h</button>
+                    <button class="sessaoselecao_template_botao" id="botao90h">90h</button>
+                    <button class="sessaoselecao_template_botao"id="botao120h">120h</button>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <p class="mensagem-erroum">Sem erros</p>
+        <section class="sessao-entrada">
+            <div class="sessao-entrada_template">
+                <p class="sessao-entrada_template_pergunta">Quantos dias você já faltou ? </p>
+                <input>
+            </div>
+        </section>
+        <hr>
+        <p class="mensagem-errodois">Sem erros</p>
+        <button id="botaocalcular">Calcular</button>
+        <section class="resposta hidden">
+            <h2>Você ainda pode faltar (dias): </h2>
+            <section class="resposta_resultado">
+                <div class="resposta_retrato">
+                    <p id="resultado">X</p>
+                </div>
+                <p id="mensagem-resultado">
+                    Você já faltou “2” dias, ainda restam “7” dias até o seu limite de faltas. Ainda tá de boa!
+                </p>
+            </section>
+        </section>
+    </main>
+    <script src="./app.js"></script>
+</body>
+</html>

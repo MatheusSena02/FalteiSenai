@@ -1,150 +1,165 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap");
 
 
+:root {
+    --font-main: "IBM Plex Mono", monospace;
+    --color-primary: rgb(76, 131, 212);
+    --color-gray-light: #e5e5e5;
+    --color-gray-bg: #d4d0d0;
+    --color-green: #06bd00;
+    --color-yellow: #cdc000;
+    --color-red: #bd0000;
+    --color-text: #000;
+}
 
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
+
+body {
     display: flex;
     justify-content: center;
     font-family: sans-serif;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: none;
- }
+    max-width: 960px;
+}
 
- html 
- { font-size: 14px; }
 
-.sessao-logos{
+.sessao-logos {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 1rem 0;
 }
 
-#logo-relogio{
+#logo-relogio {
     width: 8rem;
 }
 
-#logo-letreiro{
+#logo-letreiro {
     width: 12rem;
 }
 
-.sessao-selecao{
+
+.sessao-selecao {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
 
-.sessao-selecao_template{
+.sessao-selecao_template {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.4rem;
-    font-family: "IBM Plex Mono", monospace;
+    font-size: 1.8rem;
+    font-family: var(--font-main);
     font-weight: 700;
+    width: max-content;
 }
 
-
-.sessaoselecao_template_botao{
-    width: 3.6rem;
-    max-width: 5rem;
-    height: 2.6rem;
-    border-radius: 0.6rem;
-    font-size: 1rem;
-    background-color: #A4A4A4;
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: 600;
-}
-
-.sessaoselecao_template_botoes{
+.sessaoselecao_template_botoes {
     display: flex;
     gap: 1rem;
     margin-top: 0.6rem;
     justify-content: center;
 }
 
-.sessao-entrada{
+.sessaoselecao_template_botao {
+    width: 4rem;
+    max-width: 5rem;
+    height: 2.8rem;
+    border-radius: 0.6rem;
+    font-size: 1.4rem;
+    background-color: #a4a4a4;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-main);
+    font-weight: 600;
+}
+
+.sessao-entrada {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-right: 0;
 }
 
-.sessao-entrada_template{
+.sessao-entrada_template {
     display: flex;
     justify-content: center;
     gap: 2rem;
     align-items: center;
-    font-size: 1.4rem;
-    font-family: "IBM Plex Mono", monospace;
+    font-size: 1.8rem;
+    font-family: var(--font-main);
     font-weight: 700;
+    padding-right: 12rem;
 }
 
-.sessao-entrada_template_pergunta{
-    width: 68%;
-}
-
-hr{
+.sessao-entrada_template_pergunta {
     width: 88%;
-    margin: 0.8rem 0 0; 
-    align-items: center;
 }
 
-input{
+hr {
+    width: 100%;
+    margin: 0.8rem 0 0;
+}
+
+input {
     width: 40%;
     border: none;
     font-size: 1.2rem;
-    font-family: "IBM Plex Mono", monospace;
+    font-family: var(--font-main);
     font-weight: 600;
 }
 
-input:focus{
+input:focus {
     outline: 0;
 }
 
-#botaocalcular{
-    background-color: rgb(76, 131, 212);
-    color: white;
+
+#botaocalcular {
+    background-color: var(--color-primary);
+    color: #fff;
     width: 100%;
     max-width: 320px;
-    height: auto;
-    outline: 2px solid black;
+    outline: 2px solid #000;
     border-radius: 0.4rem;
     font-size: 1.4rem;
     display: flex;
     justify-content: center;
     text-align: center;
     padding: 1rem;
-    margin: 0.8rem auto 0 auto;
+    margin: 0.8rem auto 0;
     border: none;
-    font-family: "IBM Plex Mono", monospace;
+    cursor: pointer;
+    font-family: var(--font-main);
     font-weight: 600;
 }
 
-.mensagem-erroum, .mensagem-errodois{
-    font-family: "IBM Plex Mono", monospace;
+
+.mensagem-erroum,
+.mensagem-errodois {
+    font-family: var(--font-main);
     font-weight: 600;
     font-size: 1rem;
     opacity: 0;
-    visibility: hidden; 
+    visibility: hidden;
     padding: 0.6em 0;
 }
 
-.mensagem-erro-transicao{
-    font-family: "IBM Plex Mono", monospace;
+.mensagem-erro-transicao {
+    font-family: var(--font-main);
     font-weight: 600;
     font-size: 1rem;
     opacity: 1;
@@ -154,196 +169,141 @@ input:focus{
     padding: 0.6em 0;
 }
 
-.card-alerta{
-    width: 100%;
-    background-color: #e5e5e5;
-    padding: 20px;
-    border-radius: 6px;
-    margin-top: 20px;
-    text-align: center;
-}
 
-.card-vermelho{
-    width: 100%;
-    height: 175px;
-    background: #ff0000;
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-vermelho span{
-    color: white;
-    font-size: 70px;
-    font-weight: 500px;
-}
-
-.mensagem{
-    margin-top: 20px;
-    font-size: 19px;
-    line-height: 1.4;
-    font-weight: 600;
-}
-
-.hidden{
+.hidden {
     display: none;
 }
 
-.resposta{
+.resposta {
     align-items: center;
-    background-color: #d4d0d0;
+    background-color: var(--color-gray-bg);
     margin: 4rem;
     width: 100%;
     height: 16rem;
 }
 
-h2{
-    font-family: "IBM Plex Mono", monospace;
+h2 {
+    font-family: var(--font-main);
     font-weight: 600;
     font-size: 2.2rem;
     width: 100%;
     margin: 1.2rem 2.6rem;
 }
 
-.resposta_resultado{
+.resposta_resultado {
     display: flex;
     align-items: center;
     margin: 0 2.4rem;
     gap: 2rem;
 }
 
-.resposta_retrato{
+.resposta_retrato,
+.resposta_retrato-medio,
+.resposta_retrato-critico {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     max-width: 140px;
     height: 9.25rem;
-    background: #06BD00;
 }
 
-.resposta_retrato-medio{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 140px;
-    height: 9.25rem;
-    background: #CDC000;
+.resposta_retrato {
+    background: var(--color-green);
 }
 
-.resposta_retrato-critico{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 140px;
-    height: 9.25rem;
-    background: #BD0000;
+.resposta_retrato-medio {
+    background: var(--color-yellow);
 }
 
-#resultado{
-    font-family: "IBM Plex Mono", monospace;
+.resposta_retrato-critico {
+    background: var(--color-red);
+}
+
+#resultado {
+    font-family: var(--font-main);
     font-weight: 600;
     font-size: 6.8rem;
-    color: white;
+    color: #fff;
 }
 
-#mensagem-resultado{
-    font-family: "IBM Plex Mono", monospace;
+#mensagem-resultado {
+    font-family: var(--font-main);
     font-weight: 600;
     font-size: 1.6rem;
 }
 
-@media (max-width: 480px){
-    html{
+
+@media (max-width: 480px) {
+    html {
         font-size: 12px;
     }
 
-    body{
+    body {
         padding: 1rem;
     }
 
-    main{
+    main {
         width: 100%;
         max-width: 100%;
         padding: 0 1rem;
     }
 
-    #logo-relogio{
+    #logo-relogio {
         width: 6rem;
     }
 
-    #logo-letreiro{
+    #logo-letreiro {
         width: 10rem;
     }
-    
-    .sessao-selecao_template{
-        flex-direction: column;
-        gap: .8rem;
-        text-align: center;
 
+    .sessao-selecao_template {
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
     }
 
-    .sessaoselecao_template_botao{
+    .sessaoselecao_template_botao {
         width: 3.2rem;
         height: 2.4rem;
-        font-size: .9rem;
+        font-size: 0.9rem;
     }
 
-    .sessao-entrada{
-        margin-right: 0;
-    }
-
-    .sessao-entrada_template{
+    .sessao-entrada_template {
         flex-direction: column;
         gap: 1rem;
         text-align: center;
+        padding-right: 0;
     }
 
-    input{
+    input {
         width: 90%;
         font-size: 1rem;
     }
 
-    hr{
+    hr {
         width: 90%;
     }
 
-    #botaocalcular{
+    #botaocalcular {
         max-width: 90%;
         font-size: 1.2rem;
-        padding: .8rem;
+        padding: 0.8rem;
     }
 
-    .card-alerta{
-        width: 100%;
-        font-size: 1rem;
-        padding: 1rem;
-    }
-
-    .card-vermelho{
-        height: 130px;
-    }
-
-    .card-vermelho span{
-        font-size: 50px;
-    }
-
-    .resposta{
+    .resposta {
         width: 100%;
         margin: 2rem 0;
         height: auto;
     }
 
-    h2{
+    h2 {
         font-size: 1.6rem;
         margin: 1rem 1rem;
         text-align: center;
     }
 
-    .resposta_resultado{
+    .resposta_resultado {
         flex-direction: column;
         gap: 1rem;
         text-align: center;
@@ -351,111 +311,94 @@ h2{
 
     .resposta_retrato,
     .resposta_retrato-medio,
-    .resposta_retrato-critico{
+    .resposta_retrato-critico {
         max-width: 90px;
         height: 6rem;
     }
 
-    #resultaddo{
+    #resultado {
         font-size: 4rem;
     }
 
-    #mensagem-resultado{
+    #mensagem-resultado {
         font-size: 1.2rem;
         padding-bottom: 1rem;
     }
 }
 
-@media (min-width: 481px) and (max-width: 1024px){
-    html{
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    html {
         font-size: 13px;
     }
 
-    body{
+    body {
         padding: 1rem;
     }
 
-    main{
-       padding: 0 2rem;
-       max-width: 700px;
+    main {
+        padding: 0 2rem;
+        max-width: 700px;
     }
 
-    #logo-relogio{
+    #logo-relogio {
         width: 7rem;
     }
 
-    #logo-letreiro{
+    #logo-letreiro {
         width: 11rem;
     }
-    
-    .sessao-selecao_template{
+
+    .sessao-selecao_template {
         flex-direction: column;
         gap: 1rem;
         text-align: center;
-
     }
 
-    .sessaoselecao_template_botao{
+    .sessaoselecao_template_botao {
         width: 3.4rem;
         height: 2.6rem;
         font-size: 1.1rem;
     }
 
-    .sessao-entrada{
-        margin-right: 0;
-    }
-
-    .sessao-entrada_template{
+    .sessao-entrada_template {
         flex-direction: column;
         gap: 1.4rem;
         text-align: center;
+        padding-right: 0;
     }
 
-    input{
+    input {
         width: 80%;
         font-size: 1.2rem;
+        text-align: center;
     }
 
-    hr{
+    hr {
         width: 85%;
     }
 
-    #botaocalcular{
+    #botaocalcular {
         max-width: 80%;
         font-size: 1.4rem;
         padding: 1rem;
     }
 
-    .card-alerta{
-        width: 100%;
-        font-size: 1rem;
-        padding: 1rem;
-    }
-
-    .card-vermelho{
-        height: 150px;
-    }
-
-    .card-vermelho span{
-        font-size: 60px;
-    }
-
-    .resposta{
+    .resposta {
         width: 60rem;
         height: auto;
-        
     }
 
-    h2{
+    h2 {
         font-size: 1.6rem;
         margin: 1rem 1rem;
         text-align: center;
     }
 
-    .resposta_resultado{
-        display: flex;
-        flex-direction: column; 
-        align-items: center; 
+    .resposta_resultado {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 1rem;
         width: 100%;
         padding: 15px;
@@ -464,29 +407,20 @@ h2{
 
     .resposta_retrato,
     .resposta_retrato-medio,
-    .resposta_retrato-critico{
+    .resposta_retrato-critico {
         max-width: 110px;
         height: 8rem;
     }
 
-    #resultaddo{
+    #resultado {
         font-size: 5rem;
-        
     }
 
-    #mensagem-resultado{
-         max-width: 100%;
+    #mensagem-resultado {
+        max-width: 80%;
         word-wrap: break-word;
         overflow-wrap: break-word;
-        text-align: center; 
-        font-size: 1.3rem;
+        text-align: center;
+        font-size: 1.2rem;
     }
-
 }
-
-
-
-    
-
-
- 
